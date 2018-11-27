@@ -1,0 +1,340 @@
+@card-bg-back: "../images/card-bg.png";
+@mercury: "../images/mercury.png";
+@earth: "../images/earth.png";
+@venus: "../images/venus.png";
+@jupiter: "../images/jupiter.png";
+@mars: "../images/mars.png";
+@uranus: "../images/uranus.png";
+@pluto: "../images/pluto.png";
+@neptune: "../images/neptune.png";
+@saturn: "../images/saturn.png";
+
+
+body{
+    margin:0;
+    width: 100%;
+}
+
+.container
+{
+    position: relative;
+    width: 1366px;
+    height: 690px;
+    margin: auto;
+    background-image: url("../images/background.png");
+    text-align: center;
+}
+
+.score-field
+{
+    float: left;
+    border-bottom-right-radius: 15.02px;
+    width: 200px;
+    height: 58px;
+    box-shadow: 2px 5px 3px black;
+    text-align: center;
+    background-color: #dadae2;
+    line-height: 28px;
+
+    #score
+    {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #361157;
+        font-weight: bolder;
+        font-size: 18px;
+    }
+
+    #high-score
+    {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #361157;
+        font-weight: bold;
+    }
+}
+
+.time-bar-container
+{
+    display: inline-block;
+    margin-top: 30px;
+    width: 760px;
+    height: 16px;
+    background-color: white;
+    box-shadow: 2px 8px 5px black, -2px 8px 5px black;
+    border-radius: 8px;
+
+    .time-bar
+    {
+        position: absolute;
+        width: 620px;
+        height: 16px;
+        background-color: #8e44ad;
+        border-radius: 8px;
+    }
+}
+
+.reset-field
+{
+    float: right;
+    display: flex;
+    border-bottom-left-radius: 15.02px;
+    width: 100px;
+    height: 58px;
+    box-shadow: -2px 5px 3px black;
+    text-align: center;
+    background-color: #dadae2;
+}
+
+.reset-arrow-hover
+{
+    position: relative;
+    display: none;
+    width: 40px;
+    height: 34px;
+    margin: auto;
+    background-image: url("../images/reset-hover.png");
+}
+
+.reset-field:hover > .reset-arrow-hover
+{
+    display: inline-block;
+}
+
+.card-container
+{
+    position: relative;
+    display: inline-block;
+    margin: 30px auto;
+    width: 1127px;
+    height: 578px;
+    border-radius: 15.02px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.card-selector
+{
+    width: 126px;
+    height: 168px;
+    display: inline-block;
+    margin-left: 30px;
+    margin-right: 20px;
+    margin-top: 15px;
+}
+
+.card
+{
+    width: 126px;
+    height: 168px;
+    border-radius: 25px;
+    background: url(@card-bg-back);
+    background-size: 126px 168px;
+    transform: rotateY(0deg);
+    transition: transform 1s linear, background 0s 0.5s;
+}
+
+.card-bg-back
+{
+    background: url(@card-bg-back);
+    background-size: 126px 168px;
+}
+/*
+.mercury-bg
+{
+    background: url(@mercury);
+    background-size: 126px 168px;
+}
+*/
+.earth-bg
+{
+    background: url(@earth);
+    background-size: 126px 168px;
+}
+
+.jupiter-bg
+{
+    background: url(@jupiter);
+    background-size: 126px 168px;
+}
+
+.neptune-bg
+{
+    background: url(@neptune);
+    background-size: 126px 168px;
+}
+
+.venus-bg
+{
+    background: url(@venus);
+    background-size: 126px 168px;
+}
+
+.mars-bg
+{
+    background: url(@mars);
+    background-size: 126px 168px;
+}
+
+.uranus-bg
+{
+    background: url(@uranus);
+    background-size: 126px 168px;
+}
+
+.pluto-bg
+{
+    background: url(@pluto);
+    background-size: 126px 168px;
+}
+
+.saturn-bg
+{
+    background: url(@saturn);
+    background-size: 126px 168px;
+}
+
+/*
+.card-selector .card
+{
+    transform: rotateY(180deg);
+    background: url(@mercury);
+    background-size: 126px 168px;
+}
+*/
+
+/* TURNED CARDS */
+
+
+/*
+.card-selector .card.mercury-bg
+{
+    transform: rotateY(180deg);
+    background: url(@card-bg-back);
+    background-size: 126px 168px;
+}
+*/
+.card-selector .card.mercury-bg
+{
+    transform: rotateY(180deg);
+    background: url(@mercury);
+    background-size: 126px 168px;
+}
+
+.card-selector .card.mars-bg
+{
+    transform: rotateY(180deg);
+    background: url(@mars);
+    background-size: 126px 168px;
+}
+
+.card-selector .card.earth-bg
+{
+    transform: rotateY(180deg);
+    background: url(@earth);
+    background-size: 126px 168px;
+}
+
+.card-selector .card.pluto-bg
+{
+    transform: rotateY(180deg);
+    background: url(@pluto);
+    background-size: 126px 168px;
+}
+
+.card-selector .card.neptune-bg
+{
+    transform: rotateY(180deg);
+    background: url(@neptune);
+    background-size: 126px 168px;
+}
+
+.card-selector .card.venus-bg
+{
+    transform: rotateY(180deg);
+    background: url(@venus);
+    background-size: 126px 168px;
+}
+
+.card-selector .card.uranus-bg
+{
+    transform: rotateY(180deg);
+    background: url(@uranus);
+    background-size: 126px 168px;
+}
+
+.card-selector .card.jupiter-bg
+{
+    transform: rotateY(180deg);
+    background: url(@jupiter);
+    background-size: 126px 168px;
+}
+
+.card-selector .card.saturn-bg
+{
+    transform: rotateY(180deg);
+    background: url(@saturn);
+    background-size: 126px 168px;
+}
+
+/* UNTURNED CARDS */
+
+.card-selector .card.pluto-hidden
+{
+    transform: rotateY(180deg);
+    background: url(@pluto);
+    background-size: 126px 168px;
+}
+
+.card-selector:hover .card.earth-hidden
+{
+    transform: rotateY(180deg);
+    background: url(@earth);
+    background-size: 126px 168px;
+}
+
+.card-selector:hover .card.saturn-hidden
+{
+    transform: rotateY(180deg);
+    background: url(@saturn);
+    background-size: 126px 168px;
+}
+
+.card-selector:hover .card.mars-hidden
+{
+    transform: rotateY(180deg);
+    background: url(@mars);
+    background-size: 126px 168px;
+}
+
+.card-selector:hover .card.neptune-hidden
+{
+    transform: rotateY(180deg);
+    background: url(@neptune);
+    background-size: 126px 168px;
+}
+
+.card-selector:hover .card.venus-hidden
+{
+    transform: rotateY(180deg);
+    background: url(@venus);
+    background-size: 126px 168px;
+}
+
+.card-selector:hover .card.jupiter-hidden
+{
+    transform: rotateY(180deg);
+    background: url(@jupiter);
+    background-size: 126px 168px;
+}
+
+.card-selector:hover .card.uranus-hidden
+{
+    transform: rotateY(180deg);
+    background: url(@uranus);
+    background-size: 126px 168px;
+}
+
+.card-selector .card.mercury-hidden
+{
+    transform: rotateY(180deg);
+    background: url(@mercury);
+    background-size: 126px 168px;
+}
