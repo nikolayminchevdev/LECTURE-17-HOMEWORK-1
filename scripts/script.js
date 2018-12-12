@@ -8,7 +8,34 @@ var gameStates = {
     typeid2: ''
 };
 
+myStartInterval();
+var winResult = 0;
+var timer;
+var widthTimer = 0;
+
+var scoreField = document.getElementById('score');
+var timeBarElement = document.querySelector('.time-bar');
+
+var score = 0;
+
 var cardWinCounter = 0;
+
+function myStartInterval()
+{
+    timer = setInterval(function()
+    {
+        widthTimer+=15;
+        timeBarElement.style.width = ''+ widthTimer +'.px';
+        if (widthTimer>=760)
+        {
+            localStorage.winResult = 1;
+            localStorage.score = score;
+            open('game-over.html', '_self');
+        }
+    },
+
+1000);
+}
 
 function selectCard(cardType, bg){
     if (gameStates.selectionState===0)
@@ -34,6 +61,8 @@ function result(card1, card2){
     if (card1 === card2){
         console.log('DISAPPEAR!!!')
 
+        score+=10;
+
         var first = document.querySelector('#' + gameStates.firstSelection);
         first.setAttribute('style', 'visibility: hidden;')
 
@@ -50,8 +79,12 @@ function result(card1, card2){
         gameStates.typeid2 = '';
         gameStates.selectionState = 0;
 
+        scoreField.innerHTML = 'Score: ' +  score;
+
         if (cardWinCounter==9)
         {
+            localStorage.winResult = 2;
+            localStorage.score = score;
             open('game-over.html', '_self');
         }
     }

@@ -42,7 +42,7 @@ body {
 }
 .time-bar-container .time-bar {
   position: absolute;
-  width: 620px;
+  width: 0px;
   height: 16px;
   background-color: #8e44ad;
   border-radius: 8px;
